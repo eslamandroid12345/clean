@@ -25,7 +25,6 @@ class OrderController extends Controller
     }
 
 
-
     public function store(StoreOrderRequest $request)
     {
         return $this->orderRepository->createOrder($request);

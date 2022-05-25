@@ -14,9 +14,10 @@ class OrderRepository implements OrderRepositoryInterface
 
     public function getAllOrders()
     {
-        return Order::all();
-    }
 
+        $orders = OrderResource::collection(Order::get());
+        return returnDataSuccess("data get successfully","201","orders",$orders);
+    }
 
 
     public function getOrderById($orderId)
